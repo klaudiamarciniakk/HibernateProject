@@ -1,3 +1,5 @@
+import org.hibernate.Hibernate;
+
 import java.sql.*;
 
 public class App {
@@ -14,6 +16,7 @@ public class App {
                 System.out.printf("%-30.30s %-30.30s %-30.30s %-30.30s %-30.30s %-30.30s %-30.30s\n", resultSet.getString("id_filmu"), resultSet.getString("nazwa"),
                         resultSet.getString("cena"), resultSet.getString("gatunek_id"), resultSet.getString("opis"), resultSet.getString("zwiastun_id"),  resultSet.getString("rok_wydania"));
             }
+
 
         } catch (SQLException e) {
             System.out.println("Connection failure.");
